@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100;600&display=swap");
+.account__left {
+  float: left;
+  padding: 20px;
+  width: 50%;
+  background-image: linear-gradient(rgba(163, 162, 157, 0.575), white);
+  height: 1200px;
+}
+.account__details {
+  padding: 30px;
+  background-color: white;
+}
+.account__right {
+  float: left;
+  padding: 20px;
+  width: 50%;
+  background-image: linear-gradient(rgba(163, 162, 157, 0.575), white);
+  height: 1200px;
+}
+.account__details {
+  font-family: "Antonio", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  width: 50%;
+  height: 120px;
+  justify-content: center;
+  margin-top: 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+.account__uploadButton,
+.account__upgradeButton {
+  margin-top: 40px;
+  margin-left: 80px;
+  margin-right: 10px;
+}

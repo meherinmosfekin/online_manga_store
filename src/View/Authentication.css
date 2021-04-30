@@ -1,0 +1,25 @@
+.authentication {
+  margin-top: 12px;
+}
+.authentication > h1 {
+  margin-left: -120px;
+}
+.authentication__left {
+  float: left;
+  padding: 20px;
+  width: 45%;
+  background-color: white;
+  margin-right: 10px;
+  height: 605px;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+.authentication__right {
+  float: left;
+  padding: 20px;
+  width: 45%;
+  height: 605px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+}

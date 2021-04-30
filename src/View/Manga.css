@@ -1,0 +1,25 @@
+.manga {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* background-color: white; */
+  z-index: 1;
+
+  margin: 10px;
+  padding: 20px;
+  max-height: 400px;
+  width: 100%;
+  min-width: 200px;
+}
+.card-image > img {
+  float: left;
+  height: 230px;
+  object-fit: cover;
+}
+.manga__button {
+  margin-left: 40px;
+}
+.manga__rating {
+  display: flex;
+}

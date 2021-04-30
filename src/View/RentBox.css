@@ -1,0 +1,14 @@
+.rentbox__left {
+  float: left;
+  padding: 20px;
+  width: 50%;
+  background-image: linear-gradient(hsla(39, 100%, 50%, 0.575), white);
+  height: 1200px;
+}
+.rentbox__right {
+  float: left;
+  padding: 20px;
+  width: 50%;
+  height: 1200px;
+  background-image: linear-gradient(hsla(268, 18%, 36%, 0.26), white);
+}

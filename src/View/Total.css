@@ -1,0 +1,10 @@
+.total {
+  margin-left: 280px;
+  justify-content: center;
+  width: 200px;
+  height: 70px;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
