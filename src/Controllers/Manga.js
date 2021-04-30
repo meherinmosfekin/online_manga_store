@@ -21,20 +21,18 @@ function Manga({ key, id, title, author, image, price, rating, description }) {
   };
   return (
     <div className="manga">
-      <div className="col s12 m7">
+      <div className="col s12 m7 manga">
         <div className="card blue-grey horizontal">
           <div className="center card-image">
             <img src={image} />
           </div>
-          <div className="card-stacked">
-            <div className="card-content">
-              <h2 className="header">{title}</h2>
-              <p>
-                <i>
-                  {author} : {description}
-                </i>
-              </p>
-            </div>
+          <div className="card-content">
+            <span className="header card-title black-text">{title}</span>
+            <p>
+              <i>
+                {author} : {description}
+              </i>
+            </p>
             <div className="manga__rating">
               {Array(rating)
                 .fill()
@@ -44,15 +42,15 @@ function Manga({ key, id, title, author, image, price, rating, description }) {
                   </span>
                 ))}
             </div>
-            <div className="card-action">
-              <a href="#">{price}$</a>
-              <button
-                onClick={addToRentBox}
-                className="btn light-blue waves-effect waves-light darken-3 manga__button"
-              >
-                Add To Rent-Box
-              </button>
-            </div>
+          </div>
+          <div className="card-action">
+            <a href="#">{price}$</a>
+            <button
+              onClick={addToRentBox}
+              className="btn light-blue waves-effect waves-light darken-3 manga__button"
+            >
+              Add
+            </button>
           </div>
         </div>
       </div>

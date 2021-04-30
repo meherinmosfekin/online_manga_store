@@ -17,7 +17,7 @@ function SignUp() {
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
         //Account Creation Successful!
-        console.log(auth);
+        alert("Account Created Successfully! Now try logging in");
 
         if (auth) {
           return auth.user.updateProfile({

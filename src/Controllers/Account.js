@@ -47,6 +47,7 @@ function Account() {
 
   const search = (e) => {
     e.preventDefault();
+    setSearchedManga(null);
     db.collection("mangas").onSnapshot((snapshot) => {
       setMangas(snapshot.docs.map((doc) => doc.data()));
     });
@@ -54,6 +55,8 @@ function Account() {
     console.log(index);
     if (index >= 0) {
       setSearchedManga(mangas[index]);
+    } else {
+      alert("Manga Not Found!");
     }
   };
 
@@ -64,6 +67,7 @@ function Account() {
       id: new Date().getTime().toString(),
       title: title,
     });
+    alert("added successfully!");
     setOpen(false);
   };
   return (
@@ -109,7 +113,7 @@ function Account() {
           />
         </form>
         <hr />
-        {searchedManga ? (
+        {searchedManga && (
           <Manga
             id={searchedManga?.id}
             title={searchedManga?.title}
@@ -119,16 +123,6 @@ function Account() {
             price={searchedManga?.price}
             rating={searchedManga?.rating}
           />
-        ) : (
-          <Modal open={open} onClose={() => setOpen(false)}>
-            <div style={modalStyle} className={classes.paper}>
-              Would You like to Request for this manga?
-              <button onClick={requestProcess} class="btn green lighten-2">
-                Yes!
-              </button>
-              <button class="btn green darken-2">No!</button>
-            </div>
-          </Modal>
         )}
       </div>
     </div>

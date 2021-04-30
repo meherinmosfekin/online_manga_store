@@ -5,7 +5,6 @@ import Manga from "./Manga";
 
 function Dashboard() {
   const [mangas, setMangas] = useState([]);
-  const [value, setValue] = useState(0);
   useEffect(() => {
     db.collection("mangas").onSnapshot((snapshot) => {
       setMangas(snapshot.docs.map((doc) => doc.data()));
@@ -15,7 +14,7 @@ function Dashboard() {
   return (
     <div className="dashboard">
       <div className="dashboard__left">
-        {mangas?.splice(0, 3).map((item, i) => (
+        {mangas?.map((item, i) => (
           <div key={i}>
             <Manga
               key={item.id}
@@ -36,6 +35,17 @@ function Dashboard() {
             width="620"
             height="500"
             src="https://www.youtube.com/embed/lAXQAltnx7Y"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div className="conainer center dashboard__video">
+          <iframe
+            width="620"
+            height="500"
+            src="https://www.youtube.com/embed/YGZLvKAFeYI"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

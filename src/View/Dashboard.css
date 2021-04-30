@@ -1,8 +1,10 @@
+.dashboard {
+  background-image: linear-gradient(hsla(39, 100%, 50%, 0.575), lightblue);
+}
 .dashboard__left {
   float: left;
   padding: 20px;
   width: 50%;
-  background-image: linear-gradient(hsla(39, 100%, 50%, 0.575), lightblue);
   height: 1200px;
 }
 .dashboard__right {
@@ -10,14 +12,7 @@
   padding: 20px;
   width: 50%;
   height: 1200px;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbu-a9hbsXio9ZWVM3kRlcbYdyGBec9sq6Hw&usqp=CAU");
   background-size: 100% 100%;
-  background-repeat: no-repeat;
-  mask-image: linear-gradient(
-    to bottom right,
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 0)
-  );
 }
 .dashboard__video {
   margin-top: 150px;
