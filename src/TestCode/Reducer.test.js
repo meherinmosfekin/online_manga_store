@@ -62,6 +62,7 @@ describe("Reducer", () => {
       type: "ADD_TO_RENTBOX",
       item: item,
     });
+    state = newState;
     expect(newState).toStrictEqual(expectedState);
   });
 
@@ -82,7 +83,7 @@ describe("Reducer", () => {
     };
     const newState = reducer(state, {
       type: "REMOVE_FROM_RENTBOX",
-      item: item,
+      id: item.id,
     });
     expect(newState).toStrictEqual(expectedState);
   });
