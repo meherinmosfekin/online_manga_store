@@ -1,9 +1,34 @@
 const functions = require("firebase-functions");
+const admin = require("firebase-admin");
 const express = require("express");
 const cors = require("cors");
 const stripe = require("stripe")(
   "sk_test_51IexcjSDSYMCl1M2JTIXnS8p8dqjPJxNxLwZb0yXeYzV8vpbSGUlG4EolYBFv3zdPvwTzwl60m8fgzHa2icj58Xd00zNymo2tw"
 );
+//Setting Up Priviledged Users
+admin.initializeApp();
+
+exports.addPremiumRole = funtions.https.onCall((data, context) => {
+  return admin
+    .auth()
+    .getUserByEmail(data.email)
+    .then((user) => {
+      return (
+        admin.auth().setCustomUserClaims(user.uid),
+        {
+          premium: true,
+        }
+      );
+    })
+    .then(() => {
+      return {
+        message: `Success! ${data.email} has been made an admin`,
+      };
+    })
+    .catch((error) => {
+      return error;
+    });
+});
 
 //API
 

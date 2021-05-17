@@ -17,3 +17,6 @@
 .dashboard__video {
   margin-top: 150px;
 }
+select {
+  display: block;
+}

@@ -11,8 +11,10 @@
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
+    "bootstrap": "^5.0.1",
     "firebase": "^8.4.3",
     "materialize-css": "^1.0.0-rc.2",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-currency-format": "^1.0.0",
     "react-dom": "^17.0.2",
@@ -43,5 +45,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "check-prop-types": "^1.1.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "jest-enzyme": "^7.1.2"
   }
 }

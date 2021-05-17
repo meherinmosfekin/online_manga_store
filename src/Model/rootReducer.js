@@ -9,7 +9,9 @@ export const getTotal = (rentbox) =>
   rentbox.reduce((amount, item) => item.price + amount, 0);
 
 const reducer = (state, action) => {
-  console.log(action); // For checking if the function is working properly or not!
+  console.log("This is the action");
+  console.log(action.user);
+  console.log(action.rentbox); // For checking if the function is working properly or not!
   switch (action.type) {
     case "ADD_TO_RENTBOX":
       return {
@@ -44,6 +46,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         user: action.user,
+        rentbox: action.rentbox,
       };
 
     default:
